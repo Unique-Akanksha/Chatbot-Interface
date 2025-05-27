@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Chat Dashboard</title>
+
+    <!-- Font Awesome CSS for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <h2>Chatbot</h2>
+
+        <button id="new-chat"><i class="fas fa-comments"></i> New Chat</button>
+
+        <div class="recent"><i class="fas fa-history"></i> Recent Chats</div>
+
+        <div class="sidebar-spacer"></div>
+
+        <div class="login"><i class="fas fa-user"></i> Sign up / Log in</div>
+      </aside>
+
+      <!-- Main content -->
+      <main class="main">
+        <!-- Top bar with toggle -->
+        <header class="top-bar">
+          <button id="toggle-sidebar">
+            <i class="fas fa-bars"></i>
+          </button>
+        </header>
+
+        <!-- Dashboard Section -->
+        <section class="dashboard" id="dashboard">
+          <div>
+            <h1 class="heading">Welcome to Chatbot</h1>
+            <h2 class="heading cursor typewriter-animation">
+              Good afternoon! How can I help you today?
+            </h2>
+          </div>
+
+          <!-- Cards container -->
+          <div class="cards">
+            <!-- CREATE Card -->
+            <div class="parent">
+              <div class="card yellow">CREATE</div>
+              <div class="listParent">
+                <div class="list">Mini Volcano Project</div>
+                <div class="list">Make Scented Candles</div>
+                <div class="list">Home Workout Routine</div>
+              </div>
+            </div>
+
+            <!-- LEARN Card -->
+            <div class="parent">
+              <div class="card blue">LEARN</div>
+              <div class="listParent">
+                <div class="list">Style Saree</div>
+                <div class="list">Public Speaking</div>
+                <div class="list">Artificial Intelligence</div>
+              </div>
+            </div>
+
+            <!-- DISCOVER Card -->
+            <div class="parent">
+              <div class="card green">DISCOVER</div>
+              <div class="listParent">
+                <div class="list">Cultural Festivals</div>
+                <div class="list">Famous Street Foods</div>
+                <div class="list">Historical Places</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ask Box -->
+          <div class="ask-box">
+            <div class="input-wrapper">
+              <span class="input-icon camera">
+                <label for="dashboard-image-upload">
+                  <img
+                    src="https://img.icons8.com/ios-filled/24/camera.png"
+                    alt="camera"
+                  />
+                </label>
+                <input
+                  type="file"
+                  id="dashboard-image-upload"
+                  accept="image/*"
+                  hidden
+                />
+              </span>
+
+              <input
+                type="text"
+                id="question"
+                placeholder="Ask me anything..."
+              />
+
+              <button id="start-chat" class="input-icon send">
+                <img
+                  src="https://img.icons8.com/ios-filled/24/paper-plane.png"
+                  alt="send"
+                />
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Chat Section -->
+        <section class="chat-section" id="chat-section">
+          <div class="chat-window" id="chat-window"></div>
+
+          <div class="input-wrapper1">
+            <span class="input-icon camera">
+              <label for="chat-image-upload">
+                <img
+                  src="https://img.icons8.com/ios-filled/24/camera.png"
+                  alt="camera"
+                />
+              </label>
+              <input
+                type="file"
+                id="chat-image-upload"
+                accept="image/*"
+                hidden
+              />
+            </span>
+
+            <input
+              type="text"
+              id="chat-input"
+              placeholder="Send a message..."
+            />
+
+            <button id="send-chat" class="input-icon send">
+              <img
+                src="https://img.icons8.com/ios-filled/24/paper-plane.png"
+                alt="send"
+              />
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
